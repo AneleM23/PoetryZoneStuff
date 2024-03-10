@@ -468,6 +468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 293696632}
   - component: {fileID: 293696633}
+  - component: {fileID: 293696634}
   m_Layer: 0
   m_Name: ThemeSong
   m_TagString: Untagged
@@ -586,6 +587,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &293696634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293696631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a965736c187370a4f89683b4b7ef33d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &310642920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,6 +1155,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1274221659}
   - component: {fileID: 1274221658}
+  - component: {fileID: 1274221660}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -1176,6 +1190,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1274221660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274221657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a965736c187370a4f89683b4b7ef33d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1278212321
 GameObject:
   m_ObjectHideFlags: 0
