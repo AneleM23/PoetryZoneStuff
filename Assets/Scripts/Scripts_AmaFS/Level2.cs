@@ -9,7 +9,7 @@ enum Phase
 
 public class Level2 : MonoBehaviour
 {
-    Phase phase  ;
+    Phase phase;
 
     // Start is called before the first frame update
     void Start()
