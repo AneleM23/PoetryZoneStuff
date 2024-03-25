@@ -616,8 +616,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1028274985}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: OptionSelected
-        m_Mode: 3
+        m_MethodName: A
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -766,7 +766,7 @@ GameObject:
   - component: {fileID: 537903887}
   - component: {fileID: 537903886}
   m_Layer: 5
-  m_Name: A (2)
+  m_Name: C
   m_TagString: IncorrectAnswer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -789,7 +789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 274.5832, y: -436}
+  m_AnchoredPosition: {x: -273.01, y: -755.63}
   m_SizeDelta: {x: 440.4375, y: 151.0068}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &537903886
@@ -838,8 +838,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1028274985}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: OptionSelected
-        m_Mode: 3
+        m_MethodName: C
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1120,6 +1120,8 @@ MonoBehaviour:
   - Tempted
   - Attempted
   - Tented
+  answer: 
+  selectedAnswer: 
 --- !u!4 &1028274986
 Transform:
   m_ObjectHideFlags: 0
@@ -1515,7 +1517,7 @@ GameObject:
   - component: {fileID: 1632232838}
   - component: {fileID: 1632232837}
   m_Layer: 5
-  m_Name: A (1)
+  m_Name: B
   m_TagString: IncorrectAnswer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1538,7 +1540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 274.5832, y: -755.6307}
+  m_AnchoredPosition: {x: 274.5832, y: -436.13}
   m_SizeDelta: {x: 440.4375, y: 151.0068}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1632232837
@@ -1587,8 +1589,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1028274985}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: OptionSelected
-        m_Mode: 3
+        m_MethodName: B
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1679,7 +1681,7 @@ GameObject:
   - component: {fileID: 1788890511}
   - component: {fileID: 1788890510}
   m_Layer: 5
-  m_Name: A (3)
+  m_Name: D
   m_TagString: IncorrectAnswer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1702,7 +1704,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -273.0055, y: -755.6307}
+  m_AnchoredPosition: {x: 274.58, y: -755.63}
   m_SizeDelta: {x: 440.4375, y: 151.0068}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1788890510
@@ -1751,8 +1753,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1028274985}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: OptionSelected
-        m_Mode: 3
+        m_MethodName: D
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

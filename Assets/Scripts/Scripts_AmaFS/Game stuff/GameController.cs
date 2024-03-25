@@ -18,7 +18,9 @@ public class GameController : MonoBehaviour
     public string[] stanza5Options;
     public string[] stanza6Options;
     public string[] stanza7Options;
-    
+
+    public string answer;
+    public string selectedAnswer;
 
     private int currentStanza = 1; // Tracks the current stanza
     private string[] stanzas = new string[8]; // Stores all stanzas
@@ -31,6 +33,36 @@ public class GameController : MonoBehaviour
         LoadPoem();
 
         DisplayStanza(currentStanza);
+    }
+
+    void Update()
+    {
+        switch (currentStanza)
+        {
+            case 1:   answer = "Cheap";
+                break;
+            case 2:
+                answer = "Silence";
+                break;
+            case 3:
+                answer = "Cancer";
+                break;
+            case 4:
+                answer = "Callous";
+                break;
+            case 5:
+                answer = "Clapping";
+                break;
+            case 6:
+                answer = "Colonized";
+                break;
+            case 7:
+                answer = "Timid";
+                break;
+            case 8:
+                answer = "Tempted";
+                break;
+        }
     }
 
     void LoadPoem()
@@ -118,73 +150,158 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void OptionSelected(int buttonIndex)
-    {
-        // Find the selected button
-        // GameObject selectedButton = EventSystem.current.currentSelectedGameObject;
-        // if (selectedButton != null)
-        // {
-        // Check if the selected button has the tag "CorrectAnswer"
-        //   if (selectedButton.CompareTag("CorrectAnswer"))
-        //  {
-        // Move to the next stanza
-        //     currentStanza++;
-        //    if (currentStanza <= stanzas.Length)
-        //  {
-        //      DisplayStanza(currentStanza);
-        //}
-        //  else
-        // {
-        // Player wins
-        //    Debug.Log("Congratulations! You completed the poem.");
-        //  }
-        // }
-        // else
-        //{
-        // Incorrect option selected, decrease lives
-        //   lives--;
-        // if (lives <= 0)
-        // {
-        // Player loses
-        //Debug.Log("Game Over! You ran out of lives.");
-        // }
-        // else
-        //  {
-        // Display remaining lives or any other feedback
-        //     Debug.Log("Incorrect word. Lives remaining: " + lives);
-        // }
-        //}
-        // }
-        // else
-        // {
-        //  Debug.LogError("No button selected.");
-        // }
+    //public void CheckAnswer(int buttonIndex)
+    //{
+    // Find the selected button
+    // GameObject selectedButton = EventSystem.current.currentSelectedGameObject;
+    // if (selectedButton != null)
+    // {
+    // Check if the selected button has the tag "CorrectAnswer"
+    //   if (selectedButton.CompareTag("CorrectAnswer"))
+    //  {
+    // Move to the next stanza
+    //     currentStanza++;
+    //    if (currentStanza <= stanzas.Length)
+    //  {
+    //      DisplayStanza(currentStanza);
+    //}
+    //  else
+    // {
+    // Player wins
+    //    Debug.Log("Congratulations! You completed the poem.");
+    //  }
+    // }
+    // else
+    //{
+    // Incorrect option selected, decrease lives
+    //   lives--;
+    // if (lives <= 0)
+    // {
+    // Player loses
+    //Debug.Log("Game Over! You ran out of lives.");
+    // }
+    // else
+    //  {
+    // Display remaining lives or any other feedback
+    //     Debug.Log("Incorrect word. Lives remaining: " + lives);
+    // }
+    //}
+    // }
+    // else
+    // {
+    //  Debug.LogError("No button selected.");
+    // }
 
-        string selectedWord = answerButtons[buttonIndex].text;
-        if (answerButtons[buttonIndex].tag == "CorrectAnswer")
-            
+    //string selectedword = answerbuttons[buttonindex].text;
+    //if (answerbuttons[buttonindex].tag == "correctanswer")
+
+    //{
+    //    currentstanza++;
+    //    if (currentstanza <= stanzas.length)
+    //    {
+    //        displaystanza(currentstanza);
+    //    }
+    //    else
+    //    {
+    //        debug.log("congratulations! you completed the poem.");
+    //    }
+    //}
+    //else
+    //{
+    //    lives--;
+    //    if (lives <= 0)
+    //    {
+    //        debug.log("game over! you ran out of lives.");
+    //    }
+    //    else
+    //    {
+    //        debug.log("incorrect word. lives remaining: " + lives);
+    //    }
+    //}
+
+
+    //}
+
+    public void CheckAnswer()
+    {
+                if(answer == selectedAnswer)
         {
-            currentStanza++;
-            if (currentStanza <= stanzas.Length)
-            {
-                DisplayStanza(currentStanza);
-            }
-            else
-            {
-                Debug.Log("Congratulations! You completed the poem.");
-            }
+            //Move to the next...
+
         }
         else
         {
-            lives--;
-            if (lives <= 0)
+            //Decrease lives...
+
+        }
+
+    }
+
+    public void A()
+    {
+            // Get the current stanza's options
+            string[] currentStanzaOptions = stanzaOptions[currentStanza - 1];
+
+            // Assign the first option as the answer
+            if (currentStanzaOptions.Length > 0)
             {
-                Debug.Log("Game Over! You ran out of lives.");
+            selectedAnswer = currentStanzaOptions[0];
+                Debug.Log(selectedAnswer);
             }
             else
             {
-                Debug.Log("Incorrect word. Lives remaining: " + lives);
+                Debug.LogError("No options available for the current stanza.");
             }
+    }
+
+    public void B()
+    {
+        // Get the current stanza's options
+        string[] currentStanzaOptions = stanzaOptions[currentStanza - 1];
+
+        // Assign the second option as the answer
+        if (currentStanzaOptions.Length > 1)
+        {
+            selectedAnswer = currentStanzaOptions[1];
+            Debug.Log(selectedAnswer);
+        }
+        else
+        {
+            Debug.LogError("Not enough options available for the current stanza to assign as answer.");
+        }
+    }
+
+    public void C()
+    {
+        // Get the current stanza's options
+        string[] currentStanzaOptions = stanzaOptions[currentStanza - 1];
+
+        // Assign the third option as the answer
+        if (currentStanzaOptions.Length > 2)
+        {
+            selectedAnswer = currentStanzaOptions[2];
+            Debug.Log(selectedAnswer);
+        }
+        else
+        {
+            Debug.LogError("Not enough options available for the current stanza to assign as answer.");
+        }
+    }
+
+    public void D()
+    {
+        // Get the current stanza's options
+        string[] currentStanzaOptions = stanzaOptions[currentStanza - 1];
+
+        // Assign the fourth option as the answer
+        if (currentStanzaOptions.Length > 3)
+        {
+            selectedAnswer = currentStanzaOptions[3];
+            Debug.Log(selectedAnswer);
+        }
+        else
+        {
+            Debug.LogError("Not enough options available for the current stanza to assign as answer.");
         }
     }
 
