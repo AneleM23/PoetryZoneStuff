@@ -4,7 +4,13 @@ using UnityEngine;
 
 enum Phase
 {
-    1, 2, 3, 4, 5, 6, 7
+    A1,
+    A2, 
+    A3,
+    A4, 
+    A5,
+    A6, 
+    A7
 }
 
 public class Level2 : MonoBehaviour
