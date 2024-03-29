@@ -227,14 +227,48 @@ public class GameController : MonoBehaviour
                 if(answer == selectedAnswer)
         {
             //Move to the next...
+            MoveToNextStanza();
 
         }
         else
         {
             //Decrease lives...
+            DecreaseLives();
 
         }
 
+    }
+
+    private void MoveToNextStanza()
+    {
+        currentStanza++;
+        if (currentStanza <= stanzas.Length)
+        {
+            // Display the next stanza
+            DisplayStanza(currentStanza);
+        }
+        else
+        {
+            
+            Debug.Log("Congratulations! You completed the poem.");
+            
+        }
+    }
+
+    private void DecreaseLives()
+    {
+        lives--;
+        if (lives <= 0)
+        {
+          
+            Debug.Log("Game Over! You ran out of lives.");
+           
+        }
+        else
+        {
+            
+            Debug.Log("Incorrect word. Lives remaining: " + lives);
+        }
     }
 
     public void A()
