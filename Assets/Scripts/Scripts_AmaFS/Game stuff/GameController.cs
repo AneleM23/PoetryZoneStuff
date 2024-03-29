@@ -286,6 +286,8 @@ public class GameController : MonoBehaviour
             {
                 Debug.LogError("No options available for the current stanza.");
             }
+
+            CheckAnswer();
     }
 
     public void B()
@@ -303,6 +305,9 @@ public class GameController : MonoBehaviour
         {
             Debug.LogError("Not enough options available for the current stanza to assign as answer.");
         }
+
+        CheckAnswer();
+
     }
 
     public void C()
@@ -320,6 +325,8 @@ public class GameController : MonoBehaviour
         {
             Debug.LogError("Not enough options available for the current stanza to assign as answer.");
         }
+        CheckAnswer();
+
     }
 
     public void D()
@@ -337,6 +344,8 @@ public class GameController : MonoBehaviour
         {
             Debug.LogError("Not enough options available for the current stanza to assign as answer.");
         }
+        CheckAnswer();
+
     }
 
 }
