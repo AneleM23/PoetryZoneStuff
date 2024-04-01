@@ -85,7 +85,7 @@ public class GameController : MonoBehaviour
         stanzaOptions[3] = new string[] { "Ballast", "Gallus", "Malice", "Callous" };
         stanzaOptions[4] = new string[] { "Mapping", "Clapping", "Tapping", "Slapping" };
         stanzaOptions[5] = new string[] { "Idiolized", "Colonized", "Harmonized", "Patronized" };
-        stanzaOptions[6] = new string[] { "Limpid", "Timed", "Timed", "Midst" };
+        stanzaOptions[6] = new string[] { "Limpid", "Timed", "Timid", "Midst" };
         stanzaOptions[7] = new string[] { "Tempered", "Tempted", "Attempted", "Tented" };
     }
 
