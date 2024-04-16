@@ -6,6 +6,7 @@ using Unity.Burst.Intrinsics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -36,6 +37,9 @@ public class GameController : MonoBehaviour
     private int currentStanza = 1; // Tracks the current stanza
     private string[] stanzas = new string[16]; // Stores all stanzas
     private string[][] stanzaOptions = new string[16][];
+
+    public string WinScene;
+    public string LoseScene;
 
     // Start is called before the first frame update
     void Start()
@@ -302,8 +306,15 @@ public class GameController : MonoBehaviour
         {
             
             Debug.Log("Congratulations! You completed the poem.");
-            
+            Invoke("LoadWinScene", 5f);
+
         }
+    }
+
+    private void LoadWinScene()
+    {
+        // Load the win scene
+        SceneManager.LoadScene(WinScene);
     }
 
     private void DecreaseLives()
@@ -313,13 +324,20 @@ public class GameController : MonoBehaviour
         {
           
             Debug.Log("Game Over! You ran out of lives.");
-           
+            Invoke("LoadLoseScene", 5f);
+
         }
         else
         {
             
             Debug.Log("Incorrect word. Lives remaining: " + lives);
         }
+    }
+
+    private void LoadLoseScene()
+    {
+        // Load the win scene
+        SceneManager.LoadScene(LoseScene);
     }
 
     public void A()
