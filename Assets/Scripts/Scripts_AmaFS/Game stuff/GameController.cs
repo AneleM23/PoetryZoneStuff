@@ -17,14 +17,14 @@ public class GameController : MonoBehaviour
     public string[] stanza4Options;
     public string[] stanza5Options;
     public string[] stanza6Options;
-    public string[] stanza7Options;
+    public string[] stanza8Options;
 
     public string answer;
     public string selectedAnswer;
 
     private int currentStanza = 1; // Tracks the current stanza
-    private string[] stanzas = new string[8]; // Stores all stanzas
-    private string[][] stanzaOptions = new string[8][];
+    private string[] stanzas = new string[9]; // Stores all stanzas
+    private string[][] stanzaOptions = new string[9][];
 
     // Start is called before the first frame update
     void Start()
@@ -42,24 +42,27 @@ public class GameController : MonoBehaviour
             case 1:   answer = "Cheap";
                 break;
             case 2:
-                answer = "Silence";
+                answer = "Mantis";
                 break;
             case 3:
-                answer = "Cancer";
+                answer = "Silence";
                 break;
             case 4:
-                answer = "Callous";
+                answer = "Cancer";
                 break;
             case 5:
-                answer = "Clapping";
+                answer = "Callous";
                 break;
             case 6:
-                answer = "Colonized";
+                answer = "Clapping";
                 break;
             case 7:
-                answer = "Timid";
+                answer = "Colonized";
                 break;
             case 8:
+                answer = "Timid";
+                break;
+            case 9:
                 answer = "Tempted";
                 break;
         }
@@ -68,25 +71,27 @@ public class GameController : MonoBehaviour
     void LoadPoem()
     {
         // Load all stanzas of the poem
-        stanzas[0] = "Oh, hanging Messiah of a fallen Jerusalem. \r\nYour sons have cut holes beneath our rib cages with their razor-sharp tongues and talk is '...'. \r\nWe have called your name at the sounding of the horn. \r\nWhen barbaric lairds were nailing our goddesses to the cross. \r\nThighs loosely hung from wilting bodies; the swaying of skeletal bones imitate a praying mantis. \r\nOur father. \r\nWe are bearing petals of roses.\r\n";
-        stanzas[1] = "Dying at the hands of a trying love, slaves of sinister passion. \r\nMy people have distanced their faith from their God because gold has us believing that minds bind us in community. \r\nYou are my property. \r\nWe breathe in '...', in sync. \r\nWe are braving brutal bruises from all sorts of abuse.\r\n";
-        stanzas[2] = "Our souls. \r\nI stacking those grieving bodies drunk on brewing storms a nation brought to its knees but will inhale. \r\nThis burning sticks of “...” like dust will never settle. \r\nOur scores fail to pass. \r\n";
-        stanzas[3] = "Laws have never cast us out of formal settlements like spells. \r\nYet we have become eloquent in raging rallies and freedom. \r\nSongs sung from these wheezing chests. \r\nOur shacks are caving. \r\nIs thy name hallowed when we scream. \r\nTragedy of a clumsy, untied tube. Spilling infants to death. \r\nThe curse of a “...” uterus. \r\nSeen to face the blight of womb.\r\n";
-        stanzas[4] = "Stripping our women bare. \r\nSo, when their bodies collapse.\r\nLike two waves at a crash. \r\nThunder “...” the earth. \r\nWatching a body of water quaking at its feet.\r\nWill mercy serve their enemies junk better served sweet turns our teens into immovable trunks, obese and obscene.\r\n";
-        stanzas[5] = "Stationed at a corner where freedom doesn't reign.\r\nWe haven't stopped dying at the hands of each other.\r\nBlood spill still quenches our thirst. A country laying like sleeping dogs.\r\nOur beds are made of lying leaders with ink-stained thumbs and “...” minds. We are living virtual lives as shallow dreams are made vivid on cyber screams at demise.\r\n";
-        stanzas[6] = "“...” selling a short at the hands of nudity, while purity sex us at the umbilical, scraping our cowardice from the pavements a struggle still calls us by name.\r\nThy will is still done. \r\nMany have died in your name.\r\nLiving only on toasted crumbs.\r\nBread is far-fetched, but we have walked for much less.\r\nWe've seen it on the news.\r\n";
-        stanzas[7] = "Innocent kids trespassed against, silenced and left for dead albinos skinned and sacrificed.\r\nAre you making a mockery of our beliefs? I imagine their screams sounding like Bible pages turned in aggression, and I'm “...” to do unto others as it is done unto our mothers, who have died many a times for their sons and daughters, and still wear their crowns of thorns with bloody pride.\r\nI'm swallowing my prayers back into my chest here our mothers instead and deliver them from our sins.\r\n";
+        stanzas[0] = "Oh, hanging Messiah of a fallen Jerusalem. \r\nYour sons have cut holes beneath our rib cages with their razor-sharp tongues and talk is '...'. \r\nWe have called your name at the sounding of the horn.";
+        stanzas[1] = "When barbaric lairds were nailing our goddesses to the cross. \r\nThighs loosely hung from wilting bodies; the swaying of skeletal bones imitate a praying ‘…’. \r\nOur father. \r\nWe are bearing petals of roses.\r\n";
+        stanzas[2] = "Dying at the hands of a trying love, slaves of sinister passion. \r\nMy people have distanced their faith from their God because gold has us believing that minds bind us in community. \r\nYou are my property. \r\nWe breathe in '...', in sync. \r\nWe are braving brutal bruises from all sorts of abuse.\r\n";
+        stanzas[3] = "Our souls. \r\nI stacking those grieving bodies drunk on brewing storms a nation brought to its knees but will inhale. \r\nThis burning sticks of “...” like dust will never settle. \r\nOur scores fail to pass. \r\n";
+        stanzas[4] = "Laws have never cast us out of formal settlements like spells. \r\nYet we have become eloquent in raging rallies and freedom. \r\nSongs sung from these wheezing chests. \r\nOur shacks are caving. \r\nIs thy name hallowed when we scream. \r\nTragedy of a clumsy, untied tube. Spilling infants to death. \r\nThe curse of a “...” uterus. \r\nSeen to face the blight of womb.\r\n";
+        stanzas[5] = "Stripping our women bare. \r\nSo, when their bodies collapse.\r\nLike two waves at a crash. \r\nThunder “...” the earth. \r\nWatching a body of water quaking at its feet.\r\nWill mercy serve their enemies junk better served sweet turns our teens into immovable trunks, obese and obscene.\r\n";
+        stanzas[6] = "Stationed at a corner where freedom doesn't reign.\r\nWe haven't stopped dying at the hands of each other.\r\nBlood spill still quenches our thirst. A country laying like sleeping dogs.\r\nOur beds are made of lying leaders with ink-stained thumbs and “...” minds. We are living virtual lives as shallow dreams are made vivid on cyber screams at demise.\r\n";
+        stanzas[7] = "“...” selling a short at the hands of nudity, while purity sex us at the umbilical, scraping our cowardice from the pavements a struggle still calls us by name.\r\nThy will is still done. \r\nMany have died in your name.\r\nLiving only on toasted crumbs.\r\nBread is far-fetched, but we have walked for much less.\r\nWe've seen it on the news.\r\n";
+        stanzas[8] = "Innocent kids trespassed against, silenced and left for dead albinos skinned and sacrificed.\r\nAre you making a mockery of our beliefs? I imagine their screams sounding like Bible pages turned in aggression, and I'm “...” to do unto others as it is done unto our mothers, who have died many a times for their sons and daughters, and still wear their crowns of thorns with bloody pride.\r\nI'm swallowing my prayers back into my chest here our mothers instead and deliver them from our sins.\r\n";
 
 
         // Add more stanzas as needed
         stanzaOptions[0] = new string[] { "Sweep", "Deep", "Leap", "Cheap" };
-        stanzaOptions[1] = new string[] { "Violence", "Silence", "Alliance", "Nuisance" };
-        stanzaOptions[2] = new string[] { "Dancer", "Answer", "Cancer", "Enhancer" };
-        stanzaOptions[3] = new string[] { "Ballast", "Gallus", "Malice", "Callous" };
-        stanzaOptions[4] = new string[] { "Mapping", "Clapping", "Tapping", "Slapping" };
-        stanzaOptions[5] = new string[] { "Idiolized", "Colonized", "Harmonized", "Patronized" };
-        stanzaOptions[6] = new string[] { "Limpid", "Timed", "Timid", "Midst" };
-        stanzaOptions[7] = new string[] { "Tempered", "Tempted", "Attempted", "Tented" };
+        stanzaOptions[1] = new string[] { "Mantis", "Atlantis", "Cantus", "Fantis" };
+        stanzaOptions[2] = new string[] { "Violence", "Silence", "Alliance", "Nuisance" };
+        stanzaOptions[3] = new string[] { "Dancer", "Answer", "Cancer", "Enhancer" };
+        stanzaOptions[4] = new string[] { "Ballast", "Gallus", "Malice", "Callous" };
+        stanzaOptions[5] = new string[] { "Mapping", "Clapping", "Tapping", "Slapping" };
+        stanzaOptions[6] = new string[] { "Idiolized", "Colonized", "Harmonized", "Patronized" };
+        stanzaOptions[7] = new string[] { "Limpid", "Timed", "Timid", "Midst" };
+        stanzaOptions[8] = new string[] { "Tempered", "Tempted", "Attempted", "Tented" };
     }
 
     void DisplayStanza(int stanzaNumber)
