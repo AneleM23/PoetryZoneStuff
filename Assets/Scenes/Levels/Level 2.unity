@@ -1140,6 +1140,8 @@ MonoBehaviour:
   stanza16Options: []
   answer: 
   selectedAnswer: 
+  WinScene: WinScene
+  LoseScene: LoseScene
 --- !u!4 &1028274986
 Transform:
   m_ObjectHideFlags: 0
