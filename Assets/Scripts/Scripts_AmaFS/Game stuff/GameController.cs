@@ -324,8 +324,8 @@ public class GameController : MonoBehaviour
         {
           
             Debug.Log("Game Over! You ran out of lives.");
-            Invoke("LoadLoseScene", 5f);
-
+            //Invoke("LoadLoseScene", 5f);
+              StartCoroutine(LoadLostScene());
         }
         else
         {
@@ -417,6 +417,13 @@ public class GameController : MonoBehaviour
 
     }
 
+
+    IEnumerator LoadLostScene()
+    {
+        yield return new WaitForSeconds(5);
+
+        LoadLoseScene();
+    }
 }
 
 

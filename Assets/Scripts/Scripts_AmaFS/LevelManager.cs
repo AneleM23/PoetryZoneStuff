@@ -18,11 +18,24 @@ public class LevelManager : MonoBehaviour
     [SerializeField] AudioSource themeSong;
     [SerializeField] State state;
 
+    GameController game;
+
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
         state = State.Start;
+
+        if(themeSong != null) 
         themeSong.Play();
+
+        game = GameObject.Find("GameController").GetComponent<GameController>();
+
+        anim.SetBool("isTalking1", true);
+        anim.SetBool("isTalking2", false);
+        anim.SetBool("isSilent", false);
+        anim.SetBool("Lost", false);
     }
 
     // Update is called once per frame
@@ -40,7 +53,13 @@ public class LevelManager : MonoBehaviour
 
         if (state == State.Play)
         {
-            themeSong.Stop();
+            if (themeSong != null)
+                themeSong.Stop();
+        }
+
+         if     (game.lives <= 0)
+        {
+            anim.SetBool("Lost", true);
         }
     }
 }
